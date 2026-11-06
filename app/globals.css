@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #FBF9F5;
+  --color-ink: #121113;
+  --color-fizzOrange: #FF5B22;
+  --color-fizzLime: #22C55E;
+  --color-cardBg: #FFFFFF;
+  --color-cardMuted: #F3EFEA;
+  --color-hairline: rgba(18, 17, 19, 0.08);
+  --color-hairlineHover: rgba(18, 17, 19, 0.22);
+
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+}
+
+@layer base {
+  html {
+    background-color: #FBF9F5;
+    color: #121113;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: #FF5B22;
+    color: #FFFFFF;
+  }
+}
+
+/* Rolling Text Flip for Playful Buttons */
+.roll-btn-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .roll-btn-inner {
+  transform: translateY(-50%);
+}
+
+/* Light Mode Scroll Word Highlight */
+.reveal-word {
+  display: inline-block;
+  opacity: 0.22;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease, transform 0.3s ease;
+  transform: translateY(2px);
+}
+.reveal-word.active {
+  opacity: 1;
+  color: #121113;
+  transform: translateY(0);
+}
+@keyframes liquid-expand {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(9);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(16);
+    opacity: 0;
+  }
+}
+
+.animate-liquid-expand {
+  animation: liquid-expand 0.65s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
