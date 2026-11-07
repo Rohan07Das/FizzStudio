@@ -199,6 +199,14 @@ export default function Home() {
   const manifestoRef = useRef<HTMLParagraphElement>(null);
   const [hoveredFaq, setHoveredFaq] = useState<number | null>(null);
   const [pinnedFaq, setPinnedFaq] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 740);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   const toggleFaq = (index: number) => {
     const isCurrentlyOpen = pinnedFaq === index || hoveredFaq === index;
     if (isCurrentlyOpen) {
@@ -291,23 +299,24 @@ export default function Home() {
 
   return (
     <div className="bg-canvas text-ink min-h-screen selection:bg-fizzOrange selection:text-white font-chillax w-full overflow-x-hidden">
-      {/* FLOATING CENTERED PILLNAV */}
-      <header className="fixed top-6 inset-x-0 z-50 flex items-left justify-left pointer-events-none px-26">
-        <div className="pointer-events-auto  rounded-full">
+      {/* FLOATING PILLNAV */}
+      <header className="fixed top-4 lg:top-6 inset-x-0 z-50 flex justify-center items-center lg:justify-start lg:items-start pointer-events-none px-4 lg:px-26">
+        <div className="pointer-events-auto w-full max-w-[92vw] md:w-auto md:max-w-none rounded-full flex justify-center">
           <PillNav
-           logo={
-  <span className="flex items-center gap-2 pl-2">
-    <span
-      className="text-[24px] tracking-tight text-ink font-semibold select-none"
-      style={{
-        fontFamily: 'var(--font-chillax)',
-        fontFeatureSettings: '"liga" 1, "calt" 1, "dlig" 1',
-      }}
-    >
-      fizz
-    </span>
-  </span>
-}
+            className="w-full md:w-auto"
+            logo={
+              <span className="flex items-center gap-2 pl-2">
+                <span
+                  className="text-[20px] sm:text-[24px] tracking-tight text-ink font-semibold select-none"
+                  style={{
+                    fontFamily: 'var(--font-chillax)',
+                    fontFeatureSettings: '"liga" 1, "calt" 1, "dlig" 1',
+                  }}
+                >
+                  fizz
+                </span>
+              </span>
+            }
             logoAlt="FIZZ Studio"
             items={[
               { label: "Home", href: "#" },
@@ -317,26 +326,24 @@ export default function Home() {
               { label: "Contact", href: "#contact" },
             ]}
             activeHref="#"
-  theme="light"
-  layout="joined"
-  surface="glass"
-  /* --- COLOR PROPS --- */
-  highlightColor="linear-gradient(180deg, rgba(239, 104, 36, 0.85) 0%, rgba(255, 91, 34, 0.62) 100%)"
-  highlightTextColor="#FFFFFF"    /* Text color inside active pill */
-  barColor="rgba(255, 255, 255, 0.35)" /* Transparent glass tint */
-  itemStyle="plain"
-  hoverEffect="glide"
-  indicator="pill"
-  size="lg"
-  bounce={0.74}
-  stretch={0.68}
-  collapse="auto"
-  intro
-  style={{
-    // Glass specular rim + top bevel highlight + bottom ambient caustic glow
-    ['--pn-pill-shadow' as any]:
-      'inset 1.5px 3.5px 1.5px 1.5px rgba(255, 255, 255, 0.95), inset 0 -1.5px 1px 0 rgba(255, 255, 255, 0.95), 0 8px 24px -4px rgba(250, 69, 8, 0.45)',
-  }}
+            theme="light"
+            layout="joined"
+            surface="glass"
+            collapse={isMobile ? "always" : "never"}
+            highlightColor="linear-gradient(180deg, rgba(239, 104, 36, 0.85) 0%, rgba(255, 91, 34, 0.62) 100%)"
+            highlightTextColor="#FFFFFF"
+            barColor="rgba(255, 255, 255, 0.35)"
+            itemStyle="plain"
+            hoverEffect="glide"
+            indicator="pill"
+            size="lg"
+            bounce={0.74}
+            stretch={0.68}
+            intro
+            style={{
+              ['--pn-pill-shadow' as any]:
+                'inset 1.5px 3.5px 1.5px 1.5px rgba(255, 255, 255, 0.95), inset 0 -1.5px 1px 0 rgba(255, 255, 255, 0.95), 0 8px 24px -4px rgba(250, 69, 8, 0.45)',
+            }}
           />
         </div>
       </header>
