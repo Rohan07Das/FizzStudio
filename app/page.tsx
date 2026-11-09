@@ -770,7 +770,7 @@ export default function Home() {
           </div>
         </section>
       {/* SERVICES / PILLARS */}
-        <section id="services" className="scroll-mt-20 lg:scroll-mt-20 py-10 px-6 sm:px-12 lg:px-16 max-w-[1400px] w-full mx-auto bg-canvas">
+        <section id="services" className="scroll-mt-18 lg:scroll-mt-18 py-10 px-6 sm:px-12 lg:px-16 max-w-[1400px] w-full mx-auto bg-canvas">
           <div className="flex flex-col sm:flex-row justify-between items-baseline mb-8 pb-5">
             <div>
               <span className="text-xs uppercase tracking-wider text-fizzOrange block mb-2 font-semibold">
