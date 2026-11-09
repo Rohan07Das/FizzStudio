@@ -564,12 +564,12 @@ export default function Home() {
               </div>
 
               {/* Right Column: 10-Sticker Smooth Burst Cluster */}
-              <div className="lg:col-span-5 flex items-center justify-center">
-                <div className="relative w-full max-w-[480px] h-[520px] select-none">
+              <div className="lg:col-span-5 flex items-center justify-center w-full overflow-hidden sm:overflow-visible py-4 sm:py-0">
+                <div className="relative w-[340px] h-[380px] sm:w-[440px] sm:h-[460px] lg:w-[480px] lg:h-[520px] select-none origin-center scale-[0.82] sm:scale-95 lg:scale-100 transition-transform duration-300">
                   
                   {/* Diffused ambient background aura */}
                   <div 
-                    className={`absolute inset-10 bg-fizzOrange/5 rounded-full blur-3xl pointer-events-none transition-opacity duration-700 ${
+                    className={`absolute inset-6 sm:inset-10 bg-fizzOrange/5 rounded-full blur-3xl pointer-events-none transition-opacity duration-700 ${
                       stickersVisible ? 'opacity-100' : 'opacity-0'
                     }`} 
                   />
@@ -579,14 +579,14 @@ export default function Home() {
                     style={{
                       transitionDelay: stickersVisible ? '60ms' : '0ms',
                     }}
-                    className={`absolute top-8 left-6 z-15 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    className={`absolute top-6 sm:top-8 left-4 sm:left-6 z-15 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       stickersVisible
                         ? 'translate-x-0 translate-y-0 scale-100 opacity-100'
                         : 'translate-x-24 translate-y-[380px] scale-50 opacity-0 pointer-events-none'
                     }`}
                   >
                     <div className="transition-all duration-300 ease-out hover:z-30 hover:-translate-y-3 hover:scale-105 hover:rotate-6 cursor-pointer active:scale-95">
-                      <div className="w-20 h-20 sm:w-22 sm:h-22 p-2 rounded-2xl bg-[#0A66C4] shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(10,102,196,0.25)] -rotate-12 flex items-center justify-center">
+                      <div className="w-18 h-18 sm:w-22 sm:h-22 p-2 rounded-2xl bg-[#0A66C4] shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(10,102,196,0.25)] -rotate-12 flex items-center justify-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/linkedin.webp" alt="LinkedIn" className="w-full h-full object-contain pointer-events-none" draggable={false} />
                       </div>
@@ -598,14 +598,14 @@ export default function Home() {
                     style={{
                       transitionDelay: stickersVisible ? '40ms' : '0ms',
                     }}
-                    className={`absolute top-4 left-44 z-20 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    className={`absolute top-2 sm:top-4 left-32 sm:left-44 z-20 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       stickersVisible
                         ? 'translate-x-0 translate-y-0 scale-100 opacity-100'
                         : 'translate-x-0 translate-y-[390px] scale-50 opacity-0 pointer-events-none'
                     }`}
                   >
                     <div className="transition-all duration-300 ease-out hover:z-30 hover:-translate-y-3 hover:scale-105 hover:-rotate-4 cursor-pointer active:scale-95">
-                      <div className="w-22 h-22 sm:w-24 sm:h-24 p-4.5 rounded-3xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(255,0,0,0.18)] rotate-6 flex items-center justify-center">
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 p-4.5 rounded-3xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(255,0,0,0.18)] rotate-6 flex items-center justify-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/youtube.png" alt="YouTube" className="w-full h-full object-contain pointer-events-none" draggable={false} />
                       </div>
@@ -617,52 +617,52 @@ export default function Home() {
                     style={{
                       transitionDelay: stickersVisible ? '80ms' : '0ms',
                     }}
-                    className={`absolute top-16 right-10 z-10 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    className={`absolute top-12 sm:top-16 right-4 sm:right-10 z-10 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       stickersVisible
                         ? 'translate-x-0 translate-y-0 scale-100 opacity-100'
                         : '-translate-x-20 translate-y-[370px] scale-50 opacity-0 pointer-events-none'
                     }`}
                   >
                     <div className="transition-all duration-300 ease-out hover:z-30 hover:-translate-y-3 hover:scale-105 hover:-rotate-6 cursor-pointer active:scale-95">
-                      <div className="w-20 h-20 sm:w-22 sm:h-22 p-4 rounded-3xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(0,0,0,0.08)] rotate-12 flex items-center justify-center">
+                      <div className="w-18 h-18 sm:w-22 sm:h-22 p-4 rounded-3xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(0,0,0,0.08)] rotate-12 flex items-center justify-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/gemini.svg" alt="Gemini" className="w-full h-full object-contain pointer-events-none" draggable={false} />
                       </div>
                     </div>
                   </div>
 
-                  {/* [SLOT 8]: Middle Left - Perplexity */}
+                  {/* Sticker 4 [Slot 8]: Middle Left - Perplexity */}
                   <div
                     style={{
                       transitionDelay: stickersVisible ? '100ms' : '0ms',
                     }}
-                    className={`absolute top-44 left-4 z-20 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    className={`absolute top-36 sm:top-44 left-2 sm:left-4 z-20 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       stickersVisible
                         ? 'translate-x-0 translate-y-0 scale-100 opacity-100'
                         : 'translate-x-24 translate-y-[260px] scale-50 opacity-0 pointer-events-none'
                     }`}
                   >
                     <div className="transition-all duration-300 ease-out hover:z-30 hover:-translate-y-3 hover:scale-105 hover:rotate-6 cursor-pointer active:scale-95">
-                      <div className="w-20 h-20 sm:w-22 sm:h-22 p-1 rounded-3xl bg-[#1F1F1F] shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(0,0,0,0.18)] -rotate-6 flex items-center justify-center">
+                      <div className="w-18 h-18 sm:w-22 sm:h-22 p-1 rounded-3xl bg-[#1F1F1F] shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(0,0,0,0.18)] -rotate-6 flex items-center justify-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/perplexity.svg" alt="Perplexity" className="w-full h-full object-contain pointer-events-none" draggable={false} />
                       </div>
                     </div>
                   </div>
 
-                  {/* Sticker 4: Center Hero Focal Badge - Claude */}
+                  {/* Center Hero Focal Badge - Fizz */}
                   <div
                     style={{
                       transitionDelay: stickersVisible ? '120ms' : '0ms',
                     }}
-                    className={`absolute top-40 left-38 z-25 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    className={`absolute top-32 sm:top-40 left-28 sm:left-38 z-25 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       stickersVisible
                         ? 'translate-x-0 translate-y-0 scale-100 opacity-100'
                         : 'translate-x-0 translate-y-[280px] scale-50 opacity-0 pointer-events-none'
                     }`}
                   >
                     <div className="transition-all duration-300 ease-out hover:z-30 hover:-translate-y-4 hover:scale-110 hover:rotate-4 cursor-pointer active:scale-95">
-                      <div className="w-26 h-26 sm:w-28 sm:h-28 p-0 rounded-[28px] bg-[#FF5500] shadow-[0_8px_22px_rgba(255,85,0,0.20)] hover:shadow-[0_22px_36px_rgba(255,85,0,0.38)] -rotate-3 flex items-center justify-center">
+                      <div className="w-22 h-22 sm:w-28 sm:h-28 p-0 rounded-[24px] sm:rounded-[28px] bg-[#FF5500] shadow-[0_8px_22px_rgba(255,85,0,0.20)] hover:shadow-[0_22px_36px_rgba(255,85,0,0.38)] -rotate-3 flex items-center justify-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/fizz_logo.png" alt="fizz" className="w-full h-full object-contain pointer-events-none" draggable={false} />
                       </div>
@@ -674,90 +674,90 @@ export default function Home() {
                     style={{
                       transitionDelay: stickersVisible ? '140ms' : '0ms',
                     }}
-                    className={`absolute top-48 right-16 z-15 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    className={`absolute top-38 sm:top-48 right-6 sm:right-16 z-15 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       stickersVisible
                         ? 'translate-x-0 translate-y-0 scale-100 opacity-100'
                         : '-translate-x-16 translate-y-[240px] scale-50 opacity-0 pointer-events-none'
                     }`}
                   >
                     <div className="transition-all duration-300 ease-out hover:z-30 hover:-translate-y-3 hover:scale-105 hover:-rotate-4 cursor-pointer active:scale-95">
-                      <div className="w-20 h-20 sm:w-22 sm:h-22 p-2 rounded-2xl bg-black shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(0,0,0,0.22)] -rotate-8 flex items-center justify-center">
+                      <div className="w-18 h-18 sm:w-22 sm:h-22 p-2 rounded-2xl bg-black shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(0,0,0,0.22)] -rotate-8 flex items-center justify-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/github-white.svg" alt="GitHub" className="w-full h-full object-contain pointer-events-none" draggable={false} />
                       </div>
                     </div>
                   </div>
 
-                  {/* [SLOT 10]: Far Bottom-Left - Blender */}
+                  {/* Sticker 6 [Slot 10]: Far Bottom-Left - Blender */}
                   <div
                     style={{
                       transitionDelay: stickersVisible ? '160ms' : '0ms',
                     }}
-                    className={`absolute top-92 -left-2 z-15 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    className={`absolute top-68 sm:top-92 -left-1 sm:-left-2 z-15 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       stickersVisible
                         ? 'translate-x-0 translate-y-0 scale-100 opacity-100'
                         : 'translate-x-28 translate-y-[80px] scale-50 opacity-0 pointer-events-none'
                     }`}
                   >
                     <div className="transition-all duration-300 ease-out hover:z-30 hover:-translate-y-3 hover:scale-105 hover:-rotate-6 cursor-pointer active:scale-95">
-                      <div className="w-20 h-20 sm:w-22 sm:h-22 p-3 rounded-2xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(235,119,0,0.2)] -rotate-8 flex items-center justify-center">
+                      <div className="w-18 h-18 sm:w-22 sm:h-22 p-3 rounded-2xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(235,119,0,0.2)] -rotate-8 flex items-center justify-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/Blender_logo.svg" alt="Blender" className="w-full h-full object-contain pointer-events-none" draggable={false} />
                       </div>
                     </div>
                   </div>
 
-                  {/* Sticker 6: Bottom Left - VS Code */}
+                  {/* Sticker 7 [Slot 6]: Bottom Left - VS Code */}
                   <div
                     style={{
                       transitionDelay: stickersVisible ? '150ms' : '0ms',
                     }}
-                    className={`absolute top-80 left-24 z-20 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    className={`absolute top-60 sm:top-80 left-18 sm:left-24 z-20 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       stickersVisible
                         ? 'translate-x-0 translate-y-0 scale-100 opacity-100'
                         : 'translate-x-12 translate-y-[120px] scale-50 opacity-0 pointer-events-none'
                     }`}
                   >
                     <div className="transition-all duration-300 ease-out hover:z-30 hover:-translate-y-3 hover:scale-105 hover:rotate-6 cursor-pointer active:scale-95">
-                      <div className="w-22 h-22 sm:w-24 sm:h-24 p-2.5 rounded-3xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(0,122,204,0.2)] rotate-6 flex items-center justify-center">
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 p-2.5 rounded-3xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(0,122,204,0.2)] rotate-6 flex items-center justify-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/vs_code.svg" alt="VS Code" className="w-full h-full object-contain pointer-events-none" draggable={false} />
                       </div>
                     </div>
                   </div>
 
-                  {/* [SLOT 9]: Bottom Gap - Figma */}
+                  {/* Sticker 8 [Slot 9]: Bottom Gap - Figma */}
                   <div
                     style={{
                       transitionDelay: stickersVisible ? '180ms' : '0ms',
                     }}
-                    className={`absolute top-82 left-52 sm:left-56 z-15 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    className={`absolute top-64 sm:top-82 left-40 sm:left-52 lg:left-56 z-15 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       stickersVisible
                         ? 'translate-x-0 translate-y-0 scale-100 opacity-100'
                         : '-translate-x-8 translate-y-[110px] scale-50 opacity-0 pointer-events-none'
                     }`}
                   >
                     <div className="transition-all duration-300 ease-out hover:z-30 hover:-translate-y-3 hover:scale-105 hover:rotate-6 cursor-pointer active:scale-95">
-                      <div className="w-20 h-20 sm:w-22 sm:h-22 p-4 rounded-3xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(0,0,0,0.08)] 8deg flex items-center justify-center">
+                      <div className="w-18 h-18 sm:w-22 sm:h-22 p-4 rounded-3xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(0,0,0,0.08)] 8deg flex items-center justify-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/Figma-logo.svg" alt="Figma" className="w-full h-full object-contain pointer-events-none" draggable={false} />
                       </div>
                     </div>
                   </div>
 
-                  {/* Sticker 7: Bottom Right - Notion */}
+                  {/* Sticker 9 [Slot 7]: Bottom Right - Notion */}
                   <div
                     style={{
                       transitionDelay: stickersVisible ? '200ms' : '0ms',
                     }}
-                    className={`absolute bottom-16 right-12 z-20 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    className={`absolute bottom-6 sm:bottom-16 right-4 sm:right-12 z-20 transform-gpu will-change-transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       stickersVisible
                         ? 'translate-x-0 translate-y-0 scale-100 opacity-100'
                         : '-translate-x-20 translate-y-[80px] scale-50 opacity-0 pointer-events-none'
                     }`}
                   >
                     <div className="transition-all duration-300 ease-out hover:z-30 hover:-translate-y-3 hover:scale-105 hover:-rotate-4 cursor-pointer active:scale-95">
-                      <div className="w-20 h-20 sm:w-22 sm:h-22 p-3 rounded-3xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(0,0,0,0.12)] -rotate-12 flex items-center justify-center">
+                      <div className="w-18 h-18 sm:w-22 sm:h-22 p-3 rounded-3xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_30px_rgba(0,0,0,0.12)] -rotate-12 flex items-center justify-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/Notion-logo.svg" alt="Notion" className="w-full h-full object-contain pointer-events-none" draggable={false} />
                       </div>
