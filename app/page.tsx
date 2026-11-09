@@ -1131,8 +1131,8 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* 3. Button Placed Cleanly Below */}
-                <div className="relative left-58 z-30 -mt-6 sm:-mt-8 mb-4 pointer-events-auto">
+               {/* 3. Button Placed Cleanly Below */}
+                <div className="relative z-30 -mt-6 sm:-mt-8 mb-4 pointer-events-auto flex justify-center lg:justify-start lg:left-58">
                   <LiquidGlassButton
                     href="mailto:hello@fizz.studio"
                     variant="orange"
