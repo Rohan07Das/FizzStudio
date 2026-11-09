@@ -1097,7 +1097,7 @@ export default function Home() {
               <div className="lg:col-span-7 relative">
                 
                 {/* 1. Status Indicator Tag */}
-                <div className="flex items-center pl-14 gap-2 mb-2">
+                <div className="flex items-center pl-0 lg:pl-14 gap-2 mb-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span className="text-xs uppercase tracking-wider text-fizzOrange font-semibold">
                     Q1 ENGAGEMENT OPEN
