@@ -770,7 +770,7 @@ export default function Home() {
           </div>
         </section>
       {/* SERVICES / PILLARS */}
-        <section id="services" className="py-10 px-6 sm:px-12 lg:px-16 max-w-[1400px] w-full mx-auto bg-canvas">
+        <section id="services" className="scroll-mt-20 lg:scroll-mt-20 py-10 px-6 sm:px-12 lg:px-16 max-w-[1400px] w-full mx-auto bg-canvas">
           <div className="flex flex-col sm:flex-row justify-between items-baseline mb-8 pb-5">
             <div>
               <span className="text-xs uppercase tracking-wider text-fizzOrange block mb-2 font-semibold">
@@ -833,7 +833,7 @@ export default function Home() {
         </section>
 
         {/* PORTFOLIO WORKS (FULL-BLEED FLEX CAROUSEL) */}
-        <section id="work" className="py-8 w-full bg-cardMuted/20 overflow-hidden">
+        <section id="work" className="scroll-mt-18 lg:scroll-mt-18 py-8 w-full bg-cardMuted/20 overflow-hidden">
           {/* Constrained Header Container */}
           <div className="max-w-[1400px] w-full mx-auto px-6 sm:px-12 lg:px-16">
             <div className="flex flex-col sm:flex-row justify-between items-baseline mb-8 pb-0 ">
@@ -876,7 +876,7 @@ export default function Home() {
           </div>
         </section>
         {/* SPRINT ESTIMATOR & 3D FOLDER */}
-        <section id="estimator" className="py-14 px-6 sm:px-12 lg:px-16 max-w-[1400px] w-full mx-auto bg-canvas">
+        <section id="estimator" className="scroll-mt-18 lg:scroll-mt-18 py-14 px-6 sm:px-12 lg:px-16 max-w-[1400px] w-full mx-auto bg-canvas">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Column: Estimator Card (7 cols) */}
@@ -1088,7 +1088,7 @@ export default function Home() {
             </section>
 
         {/* FOOTER */}
-        <footer id="contact" className="relative overflow-hidden w-full bg-canvas">
+        <footer id="contact" className="scroll-mt-18 lg:scroll-mt-18 relative overflow-hidden w-full bg-canvas">
           
           <div className="max-w-[1400px] w-full mx-auto px-6 sm:px-12 lg:px-16 pt-12 pb-16 relative z-20 pointer-events-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
